@@ -1,0 +1,50 @@
+<!-- 搜索条 -->
+<view class="cu-bar bg-white search">
+  <view class="search-form radius">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <text>搜索</text>
+  </view>
+</view>
+
+<!-- 轮播 -->
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{banner}}" wx:key data-id="{{item.id}}">
+    <image src="{{item.pic_info.url}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 热门歌单 -->
+<view>
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange ">热门歌单</text>
+    </view>
+  </view>
+  <view class="cu-list grid col-3 no-border">
+    <view class="cu-item" wx:for="{{hotsong}}" wx:key data-id="{{item.dissid}}">
+      <image src="{{item.imgurl}}" class='radius' mode="aspectFill" style='width:200rpx;height:200rpx;margin:auto'></image>
+      <text class='text-cut'>{{item.dissname}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 推荐歌曲 -->
+<view class="cu-list menu-avatar">
+  <view class="cu-item" wx:for="{{topList}}" wx:key data-id="{{item.id}}" bindtap='toPlaySong'>
+    <view class="cu-avatar radius lg" style="background-image:url({{item.pic}});"></view>
+    <view class="content">
+      <view class="text-grey">{{item.name}}</view>
+      <view class="text-gray text-sm flex">
+        <view class="text-cut">
+          {{item.singer}}
+        </view>
+      </view>
+    </view>
+    <view class="action">
+      <view class="text-grey text-xs">{{item.time}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+/* miniprogram/pages/play/play.wxss */
+
+.pan {
+}
+
+.pic {
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+}
+.pic.active{
+  animation: picRotate 10s linear infinite;
+}
+
+@keyframes picRotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

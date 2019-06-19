@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scanCode/scanCode",
+    "pages/play/play"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/shouye.png",
+        "selectedIconPath": "images/icon/shouye.png"
+      },
+      {
+        "pagePath": "pages/scanCode/scanCode",
+        "text": "扫码",
+        "iconPath": "images/icon/saoma.png",
+        "selectedIconPath": "images/icon/saoma.png"
+      }
+    ]
+  }
+}

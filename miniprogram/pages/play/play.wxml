@@ -1,0 +1,28 @@
+<view class="pan flex flex-direction justify-center align-center">
+  <view>{{songDetail.name}}</view>
+  <image src="{{songDetail.pic}}" class="pic {{active?'active':''}}"></image>
+</view>
+
+<!-- 进度条 -->
+<view class="padding bg-white">
+  <view class="cu-progress round sm striped {{active?'active':''}}">
+    <view class="bg-green" style="width:{{progress}}%;"></view>
+  </view>
+</view>
+
+<!-- 操作条 -->
+<view class="padding bg-white flex justify-around">
+  <button class="cu-btn icon">
+    <text class="cuIcon-back"></text>
+  </button>
+  <button class="cu-btn icon" bindtap="playOrStop">
+    <text wx:if="{{play}}" class="cuIcon-stop"></text>
+    <text wx:else class="cuIcon-stop"></text>
+  </button>
+  <button class="cu-btn icon">
+    <text class="cuIcon-right"></text>
+  </button>
+  <button class="cu-btn icon" bindtap="like">
+    <text class="cuIcon-like"></text>
+  </button>
+</view>
